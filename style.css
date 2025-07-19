@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    position: relative;
+    background: transparent;
+    overflow-x: hidden;
+  }
+  
+  .animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5, #4ade80, #00c9ff, #ff6ec4);
+    background-size: 600% 600%;
+    animation: gradientShift 20s ease infinite;
+  }
+  
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  header {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #4ade80;
+  }
+  
+  section {
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  }
+  
+  h2 {
+    color: #00e0ff;
+    margin-bottom: 1em;
+  }
+  
+  .project, .internship {
+    background-color: #222;
+    padding: 1em;
+    border-radius: 6px;
+    margin-bottom: 1.5em;
+  }
+  
+  .project button {
+    margin-top: 10px;
+    padding: 0.6em 1.2em;
+    background: #4ade80;
+    border: none;
+    color: #000;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .project button:hover {
+    background-color: #22c55e;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  
+  input, textarea {
+    padding: 1em;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    background-color: #00e0ff;
+    border: none;
+    padding: 1em;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #00bcd4;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background-color: white;
+    color: black;
+    padding: 2em;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    width: 300px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
